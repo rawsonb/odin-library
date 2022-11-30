@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
     <title>Library</title>
 </head>
 <body>
     <div id="books">
     </div>
+    <form action="" class="add-book">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author">
+        <label for="pages">Pages:</label>
+        <input type="number" name="pages" id="pages" oninput="if(this.value<0){this.value=0}else if(this.value%1 != 0){this.value=Math.floor(this.value)}else if(!this.value/1){this.value= null}">
+        <input type="button" value="Add" id="add-button">
+    </form>
 </body>
 </html>

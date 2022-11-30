@@ -1,24 +1,26 @@
 * {
     font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: lightcyan;
+    background-color: whitesmoke;
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #books {
     margin-top: 15px;
-    background-color: lightblue;
-    height: 80vh;
+    background-color: white;
+    height: calc(100vh - 300px);
     width: 90vw;
     border-radius: 10px;
-    border: 3px solid grey;
+    box-shadow: 0 1px 2px lightgrey;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: repeat(auto-fit, 200px);
@@ -26,8 +28,8 @@ body {
 }
 
 #books > div {
-    background-color: white;
-    box-shadow: 1px 1px 3px lightslategray;
+    background-color: whitesmoke;
+    box-shadow: 0px 1px 3px lightgray;
     margin: 18px;
     border-radius: 10px;
     text-align: center;
@@ -51,4 +53,68 @@ body {
 
 #books > div > p:last-child {
     font-size: 1rem;
+}
+
+.add-book {
+    height: 250px;
+    width: 90vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 1px 2px lightgray;
+}
+
+.add-book > form > * {
+    margin: 15px;
+    max-width: max(300px, 90%);
+    flex-grow: 1;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+input[type="button"] {
+    background-color: lightskyblue;
+    /* border: 2px solid black; */
+    border:none;
+    border-radius: 10px;
+    height: 30px;
+    width: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 2px 1px lightslategray;
+}
+
+input[type="button"]:active {
+    box-shadow: none;
+    transform: translatey(1.5px);
+    text-indent: -0.25px;
+}
+
+button { 
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: lightskyblue;
+    border: none;
+    box-shadow: 0px 1px 2px grey;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(2px) translateX(0.5px);
+    text-indent: -0.5px;
+    width: 21px;
+    height: 21px;
+    margin-top: -1px;
 }
